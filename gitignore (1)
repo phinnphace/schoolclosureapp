@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Runtime state
+mmsd_watch_state.json
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

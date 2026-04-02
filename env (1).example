@@ -1,0 +1,39 @@
+# ============================================================
+# MMSD Closure Monitor – Environment Variables
+# ============================================================
+# 1. Copy this file:   cp .env.example .env
+# 2. Fill in your values below
+# 3. NEVER commit .env to version control
+# ============================================================
+
+# Page to monitor (default is MMSD's homepage)
+WATCH_URL=https://www.madison.k12.wi.us
+
+# How often to check, in seconds (default: 300 = 5 minutes)
+CHECK_INTERVAL_SECONDS=300
+
+# ---- Gmail sender credentials --------------------------------
+# Use your Gmail address and a Google App Password (not your real password).
+# Create one at: myaccount.google.com → Security → 2-Step Verification → App Passwords
+FROM_EMAIL=you@gmail.com
+FROM_APP_PASSWORD=xxxx_xxxx_xxxx_xxxx
+
+# ---- Where to send alerts ------------------------------------
+# SMS via carrier email gateway (arrives as a text message)
+# Format: your_10_digit_number@carrier_gateway
+#
+# Common gateways:
+#   Verizon:    @vtext.com
+#   AT&T:       @txt.att.net
+#   T-Mobile:   @tmomail.net
+#   US Cellular:@email.uscc.net
+#
+TO_SMS=6085551234@vtext.com
+
+# Optional: also send to a regular email inbox (leave blank to disable)
+TO_EMAIL=
+
+# ---- State file location -------------------------------------
+# Where the script stores its "last seen" hash between runs.
+# Defaults to the same folder as the script. Change if needed.
+STATE_FILE=
