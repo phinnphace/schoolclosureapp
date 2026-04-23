@@ -1,14 +1,14 @@
 # 📱 MMSD School Closure & Delay Monitor
 
-MMSD (Madison Metropolitan School District) has a well-documented pattern of being one of the last districts in Dane County to announce closures and delays — often well after families with non-flexible schedules have already had to make childcare decisions.
+MMSD (Madison Metropolitan School District) has a well-documented pattern of being one of the last districts in Dane County to announce closures and delays — often well after families with non-flexible schedules have already had to make childcare decisions. I din't think this is unique to this school district, nor do I think this is unique to my family which is why I wanted to share this. I will build this out more so it is a mobile and desktop app for ease of use. Not everyone is comfortable running lines of code. I wasn't either. This script can be adapted to any such use (weather, frequency and or keywords). I have mine set to crawl local news sites as well because that is how we roll here. Often the local news will be first to know about delays, and/or closures before the district officially announces. 
 
-This script won't fix that policy. But it will text you (or email you) the moment the MMSD website changes or closure/delay language appears, so you're not refreshing a browser tab at 5 AM.
+This script won't fix that policy. But it will text you (or email you) the moment the MMSD website changes or closure/delay language appears, so you're not refreshing a browser tab at 5 AM, or stuck to your phone checking three sites. 
 
 ---
 
 ## How it works
 
-The script polls the MMSD homepage every 5 minutes and does two things:
+The script polls the MMSD homepage, and local news sites every 5 minutes and does two things:
 
 1. **Page change detection** — hashes the full page content on each check. If anything changes, you get an alert immediately.
 2. **Keyword detection** — scans for words like "closed," "delay," "late start," "cancelled," etc. Sends a one-time alert the first time these appear.
